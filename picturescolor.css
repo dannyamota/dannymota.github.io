@@ -1,0 +1,47 @@
+body
+{
+	margin: 0;
+	width:100%;
+}
+
+#pictures {
+	width:80%;
+	margin: 0 10%;
+}
+
+#pictures img
+{
+	width: 25%;
+	height: 250px;
+
+}
+
+img.mainPic {
+	width: 600px;
+	height: 450px;
+	margin:auto;
+	display:block;
+}
+#arrows
+{
+	margin: -17% 0px 0px 25%;
+	position: absolute;
+}
+#arrows1
+{
+	/*margin: -17% 0px 0px 93.3%;*/
+	position: absolute;
+	margin: -17% 0px 0px 67.6%;
+}
+/*#pictures img:hover
+{
+	width: 600px;
+	height: 450px;
+}
+*/
+
+.inactive {
+	opacity: 0.1;
+}
+
+

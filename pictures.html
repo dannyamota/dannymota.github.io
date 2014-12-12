@@ -1,0 +1,80 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="picturescolor.css">
+<title>
+Danny Mota
+</title>
+</head>
+<body>
+	<div id='currentPic'>
+		<img class='mainPic' />
+	</div>
+	<div id='arrows' class='inactive'>
+		<img src="arrow1.png" alt="Mountain View">
+	</div>
+	<div id='arrows1'>
+		<img src="arrow2.png" alt="Mountain View">
+	</div>
+	<div id="pictures">
+
+	</div>
+	<script>
+
+		function getImgSrc( index ) {
+			return "Danny ("+ index +").jpg";
+		}
+
+		var pictureDiv = document.getElementById('pictures');
+		for(var a = 1; a <= 95; a++)
+		{
+			var img = document.createElement('img');
+			img.setAttribute('src', getImgSrc(a));
+			img.setAttribute('alt', 'Mountain View');
+			img.setAttribute('id', a);
+			pictureDiv.appendChild(img);
+		}
+
+		var mainPicture = document.getElementsByClassName('mainPic')[0];
+		mainPicture.setAttribute('src', getImgSrc(1));
+		mainPicture.setAttribute('data', 1);
+
+		document.getElementById('arrows').addEventListener('click', function() {
+
+			document.getElementById("arrows1").removeAttribute('class');
+
+			var index = mainPicture.getAttribute('data');
+			if( index == 1) {
+				document.getElementById("arrows").setAttribute('class', "inactive");
+				return;
+			}
+			index--;
+			mainPicture.setAttribute('src', getImgSrc(index));
+			mainPicture.setAttribute('data', index);
+
+			if( index == 1) {
+				document.getElementById("arrows").setAttribute('class', "inactive");
+			}
+		}); 
+
+		document.getElementById('arrows1').addEventListener('click', function() {
+
+			document.getElementById("arrows").removeAttribute('class');
+
+			var index = mainPicture.getAttribute('data');
+			if( index == 95) {
+				document.getElementById("arrows1").setAttribute('class', "inactive");
+				return;
+			}
+			index++;
+			document.getElementById(index).setAttribute('class','inactive');
+			mainPicture.setAttribute('src', getImgSrc(index));
+			mainPicture.setAttribute('data', index);
+
+			if( index == 95) {
+				document.getElementById("arrows1").setAttribute('class', "inactive");
+			}
+		}); 
+	</script>
+</body>
+</html>
+
