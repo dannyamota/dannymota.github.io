@@ -11,8 +11,9 @@ body
 
 #pictures img
 {
-	width: 25%;
+	width: 24%;
 	height: 250px;
+	border: 1px solid black;
 
 }
 
@@ -21,17 +22,19 @@ img.mainPic {
 	height: 450px;
 	margin:auto;
 	display:block;
+	border: 1px solid black;
+	border-bottom: 0px;
 }
 #arrows
 {
-	margin: -17% 0px 0px 25%;
+	margin: -17% 0px 0px 18%;
 	position: absolute;
 }
 #arrows1
 {
 	/*margin: -17% 0px 0px 93.3%;*/
 	position: absolute;
-	margin: -17% 0px 0px 67.6%;
+	margin: -17% 0px 0px 74.6%;
 }
 /*#pictures img:hover
 {
@@ -43,5 +46,59 @@ img.mainPic {
 .inactive {
 	opacity: 0.1;
 }
+@font-face {
+    font-family: big;
+    src: url(big_noodle_titling.ttf);
+}
 
 
+.menubar a
+{
+	color:gray;
+	text-decoration: none;
+	opacity: 1;
+	font-size: 30px;
+}
+.menubar a:hover
+{
+	font-size: 35px;
+	color: yellow;
+}
+#menuabout
+{
+	width: 100%;
+	font-size:30px;
+	color: blue; 
+	position: absolute;
+	font-family: big;
+	top: 25px;
+	text-align: right;
+	right: 130px;
+	opacity: 1;
+}
+
+#menupic
+{
+	width: 100%;
+	font-size:30px;
+	color: white; 
+	position: absolute;
+	font-family: big;
+	top: 25px;
+	text-align: right;
+	right: 250px;
+	opacity: 1;
+}
+
+#menuharrison
+{
+	width: 100%;
+	font-size:30px;
+	color: white; 
+	position: absolute;
+	font-family: big;
+	top: 25px;
+	text-align: right;
+	right: 380px;
+	opacity: 1;
+}

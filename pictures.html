@@ -16,7 +16,18 @@ Danny Mota
 		<img src="arrow2.png" alt="Mountain View">
 	</div>
 	<div id="pictures">
-
+	<div class="menubar">
+	<div id="menuabout">
+	<a href="pictures.html">Pictures</a>
+	</div>
+	<div id="menupic">
+	<a href="http://www.townofharrison.com">Harrison</a>
+	</div>
+	<div id="menuharrison">
+	<a href="index.html">Home</a>
+	</div>
+	</div>
+	<div id="background">
 	</div>
 	<script>
 
@@ -66,7 +77,6 @@ Danny Mota
 				return;
 			}
 			index++;
-			document.getElementById(index).setAttribute('class','inactive');
 			mainPicture.setAttribute('src', getImgSrc(index));
 			mainPicture.setAttribute('data', index);
 
